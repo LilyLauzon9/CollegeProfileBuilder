@@ -41,10 +41,63 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="t9N-5V-821"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="INo-oE-Cdp"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="t9N-5V-821" id="TWo-ug-ehY"/>
+                        <outlet property="tableView" destination="Hkf-zS-HOQ" id="Qcx-Tg-Ody"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1098" y="323"/>
+        </scene>
+        <!--Colleges View Controller-->
+        <scene sceneID="hfX-px-E5g">
+            <objects>
+                <viewController id="Z7X-tn-4Sj" customClass="CollegesViewController" customModule="CollegeProfileBuilder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3X0-gf-LYa"/>
+                        <viewControllerLayoutGuide type="bottom" id="NYx-1k-Ftn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LvO-fi-6Fe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name Of School" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mE-Es-a2l">
+                                <rect key="frame" x="200" y="103" width="200" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location of School" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99W-4O-X76">
+                                <rect key="frame" x="200" y="141" width="200" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSk-e8-THG">
+                                <rect key="frame" x="200" y="179" width="200" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLW-AG-Ytm">
+                                <rect key="frame" x="180" y="217" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="BLW-AG-Ytm" id="dlq-Hk-sX2"/>
+                        <outlet property="locationTextField" destination="99W-4O-X76" id="LfZ-EL-YYi"/>
+                        <outlet property="nameTextField" destination="1mE-Es-a2l" id="BLS-Oq-jA8"/>
+                        <outlet property="numberTextField" destination="NSk-e8-THG" id="oss-6e-FFv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAz-ko-eOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="323"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8uT-gQ-WAD">
@@ -63,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vba-gs-NfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="323"/>
+            <point key="canvasLocation" x="460" y="323"/>
         </scene>
     </scenes>
 </document>

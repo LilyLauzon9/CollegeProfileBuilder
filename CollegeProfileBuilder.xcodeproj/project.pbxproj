@@ -14,6 +14,8 @@
 		3FD043611C4FFCD800244CBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0435F1C4FFCD800244CBC /* LaunchScreen.storyboard */; };
 		3FD0436C1C4FFCD800244CBC /* CollegeProfileBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0436B1C4FFCD800244CBC /* CollegeProfileBuilderTests.swift */; };
 		3FD043771C4FFCD800244CBC /* CollegeProfileBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD043761C4FFCD800244CBC /* CollegeProfileBuilderUITests.swift */; };
+		3FD043851C50042700244CBC /* CollegesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD043841C50042600244CBC /* CollegesViewController.swift */; };
+		3FD043871C57EC9800244CBC /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD043861C57EC9800244CBC /* College.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3FD043721C4FFCD800244CBC /* CollegeProfileBuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeProfileBuilderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD043761C4FFCD800244CBC /* CollegeProfileBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeProfileBuilderUITests.swift; sourceTree = "<group>"; };
 		3FD043781C4FFCD800244CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD043841C50042600244CBC /* CollegesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegesViewController.swift; sourceTree = "<group>"; };
+		3FD043861C57EC9800244CBC /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				3FD043561C4FFCD800244CBC /* AppDelegate.swift */,
 				3FD043581C4FFCD800244CBC /* ViewController.swift */,
 				3FD0435A1C4FFCD800244CBC /* Main.storyboard */,
+				3FD043841C50042600244CBC /* CollegesViewController.swift */,
+				3FD043861C57EC9800244CBC /* College.swift */,
 				3FD0435D1C4FFCD800244CBC /* Assets.xcassets */,
 				3FD0435F1C4FFCD800244CBC /* LaunchScreen.storyboard */,
 				3FD043621C4FFCD800244CBC /* Info.plist */,
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD043851C50042700244CBC /* CollegesViewController.swift in Sources */,
 				3FD043591C4FFCD800244CBC /* ViewController.swift in Sources */,
 				3FD043571C4FFCD800244CBC /* AppDelegate.swift in Sources */,
+				3FD043871C57EC9800244CBC /* College.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,17 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    
+    var colleges : [CollegesViewController] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        editButton.tag = 0
+        
+        colleges.append(CollegesViewController(name: "Columbia College Chicago", location: "Illinois", numberOfStudents: 10000, image: UIImage(named: "ColumbiaCollegeChicago")!))
+        //colleges.append(CollegesViewController(name: "Stanford", location: "California", numberOfStudents: 00000, image: UIImage(named: "ColumbiaCollegeChicago")!))
+        //colleges.append(CollegesViewController(name: "Columbia College Chicago", location: "Illinois", numberOfStudents: 10000, image: UIImage(named: "ColumbiaCollegeChicago")!))
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
