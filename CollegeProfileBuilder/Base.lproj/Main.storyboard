@@ -43,7 +43,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="YSl-Dq-UUi">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="t9N-5V-821"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="INo-oE-Cdp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="INo-oE-Cdp">
+                            <connections>
+                                <action selector="onTappedPlusButton:" destination="BYZ-38-t0r" id="9nn-Y2-cwd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="editButton" destination="t9N-5V-821" id="TWo-ug-ehY"/>
