@@ -19,7 +19,7 @@ class CollegesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextField.text = colleges.name
+        //nameTextField.text = colleges.name
 
     }
 
