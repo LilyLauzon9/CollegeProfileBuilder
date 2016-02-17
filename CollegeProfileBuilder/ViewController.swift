@@ -97,11 +97,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         colleges.insert(college, atIndex: destinationIndexPath.row)
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         let dvc = segue.destinationViewController as! CollegesViewController
         let index = tableView.indexPathForSelectedRow?.row
         dvc.colleges = colleges[index!]
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
 }
