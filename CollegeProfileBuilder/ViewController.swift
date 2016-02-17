@@ -13,10 +13,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
     
-    var colleges = ["Columbia College Chicago", "University of Stanford", "University of Illinois"]
+    var colleges : [College] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        colleges.append(College(name: "Collumbia College Chicago", location: "Chicago, IL", numberOfStudents: 9000, image: UIImage(named: "CollumbiaCollegeChicago")!))
+        colleges.append(College(name: "University of Illinois", location: "Chicago, IL", numberOfStudents: 10000, image: UIImage(named: "UniversityOfIllinois")!))
+        colleges.append(College(name: "University of Stanford", location: "California", numberOfStudents: 8000, image: UIImage(named: "UniversityOfStandford")!))
+        
+        editButton.tag = 0
         
     }
 
@@ -33,12 +39,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let addAction = UIAlertAction(title: "Add", style: .Default) { (action) -> Void in
             let nameTextField = alert.textFields![0] as UITextField
-            self.colleges.append(nameTextField.text!)
+            self.colleges.append(College(name: nameTextField.text!))
             self.tableView.reloadData()
         }
         alert.addAction(addAction)
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func onTappedEditButton(sender: UIBarButtonItem)
+    {
+        if sender.tag == 0
+        {
+            tableView.editing = true
+            sender.tag = 1
+        }
+        else
+        {
+            tableView.editing = false
+            sender.tag = 0
+        }
+    }
+    
 /******************************************* [End of IBActions] *****************************************************/
     
     
@@ -46,7 +67,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
-        cell.textLabel?.text = colleges[indexPath.row]
+        cell.textLabel?.text = colleges[indexPath.row].name
         return cell
     }
     
@@ -62,6 +83,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             colleges.removeAtIndex(indexPath.row)
             tableView.reloadData()
         }
+    }
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    {
+        let college = colleges[sourceIndexPath.row]
+        colleges.removeAtIndex(sourceIndexPath.row)
+        colleges.insert(college, atIndex: destinationIndexPath.row)
     }
     
     
