@@ -30,6 +30,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="Z7X-tn-4Sj" kind="show" id="G2A-5r-DNh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
