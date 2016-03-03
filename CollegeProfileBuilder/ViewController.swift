@@ -18,9 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        colleges.append(College(name: "Collumbia College Chicago", location: "Chicago, IL", numberOfStudents: 9000, image: UIImage(named: "CollumbiaCollegeChicago")!))
-        colleges.append(College(name: "University of Illinois", location: "Chicago, IL", numberOfStudents: 10000, image: UIImage(named: "UniversityOfIllinois")!))
-        colleges.append(College(name: "University of Stanford", location: "California", numberOfStudents: 8000, image: UIImage(named: "UniversityOfStandford")!))
+        colleges.append(College(name: "Columbia College Chicago", location: "Chicago, IL", numberOfStudents: 9000, image: UIImage(named: "ColumbiaCollegeChicago")!, webpage: "https://www.colum.edu/"))
+        colleges.append(College(name: "University of Illinois", location: "Chicago, IL", numberOfStudents: 10000, image: UIImage(named: "UniversityOfIllinois")!, webpage: "https://www.illinois.edu/"))
+        colleges.append(College(name: "University of Stanford", location: "California", numberOfStudents: 8000, image: UIImage(named: "UniversityOfStandford")!, webpage: "https://www.stanford.edu/"))
         
         editButton.tag = 0
         
@@ -59,6 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             sender.tag = 0
         }
     }
+    
     
 /******************************************* [End of IBActions] *****************************************************/
     
